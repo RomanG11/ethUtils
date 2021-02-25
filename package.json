@@ -1,7 +1,7 @@
 {
-  "name": "node-typescript-starter",
+  "name": "@unknown222/eth-utils",
   "version": "0.0.1",
-  "description": "A Typescript starter project for Jio.",
+  "description": "A Typescript starter project for Roman",
   "author": {
     "name": "Roman"
   },
@@ -24,6 +24,7 @@
   },
   "scripts": {
     "prestart": "run-s test",
+    "dev": "ts-node ./example/index.ts",
     "build": "tsc",
     "test": "run-s test:lint test:unit",
     "test:lint": "eslint ./src --ext .ts,.tsx",
@@ -33,14 +34,16 @@
     "doc:html": "typedoc",
     "changelog": "changelog",
     "code:prettier": "prettier --write \"./src/**/*.{js,ts,tsx,json,scss}\"",
-    "prepare": "npm run test && npm run build && npm run changelog"
+    "prepublishOnly": "npm run build"
   },
   "husky": {
     "hooks": {
       "pre-push": "npm run test:lint && npm run test:unit"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "ethers": "^5.0.31"
+  },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@types/jest": "^26.0.20",
