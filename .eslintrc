@@ -1,0 +1,37 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "standard",
+    "plugin:prettier/recommended",
+    "prettier/standard",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
+  "settings": {
+  },
+  "rules": {
+    "space-before-function-paren": 0,
+    "import/export": 1,
+    "import/no-cycle": 1,
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "ignoreRestSiblings": true, "args": "none" }
+    ],
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/ban-ts-comment": 0
+    //  warning  Argument 'args' should be typed with a non-any type  @typescript-eslint/explicit-module-boundary-types
+    //  warning 'title' PropType is defined but prop is never used  react/no-unused-prop-types
+  }
+}

@@ -1,0 +1,11 @@
+build/
+dist/
+node_modules/
+.snapshots/
+webpack.config.js
+*.min.js
+**/*.mdx
+serverless/
+src/assets
+src/elements/Icons
+deployment/
